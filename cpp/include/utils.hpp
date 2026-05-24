@@ -6,10 +6,11 @@
 #include <algorithm>
 #include <string>
 #include <limits>
+#include <unordered_map>
 
 using namespace std;
 
-namespace vecutils
+namespace utils
 {
     template <typename T>
     void print_vector(const vector<T>& v, const string& msg = "")
@@ -139,4 +140,24 @@ namespace vecutils
         return dedup_sorted;
     }
 
+    // unordered_map utils
+
+    template <typename X, typename Y>
+    void print_unordered_map (const unordered_map<X,Y>& u_map)
+    {
+        for (const auto& p : u_map)
+        {
+            cout << "{" << p.first << ", " << p.second << "}" << endl;
+        }
+    }
+    template <typename T>
+    unordered_map<T,int> createFreqMap(const vector<T>& vec)
+    {
+        unordered_map<T, int> freqMap;
+        for (const T& x : vec)
+        {
+            freqMap[x]++;
+        }
+        return freqMap;
+    }
 }

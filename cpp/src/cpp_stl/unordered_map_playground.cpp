@@ -21,7 +21,7 @@ int main()
     utils::print_unordered_map(freq1);
     
     vector <int> nums = {1, 2,3,4 ,56, 78,9};
-    unordered_map<string, int> freq2 = utils::createFreqMap(v);
+    unordered_map<int, int> freq2 = utils::createFreqMap(v);
     utils::print_unordered_map(freq2);
     
     return 0;

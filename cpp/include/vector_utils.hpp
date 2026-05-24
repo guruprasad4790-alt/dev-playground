@@ -20,13 +20,6 @@ namespace vecutils
     }
 
     template<typename T>
-    void print_vector(const vector<T>& v)
-    {
-        for (const auto& x : v) { cout << x << " "; }
-        cout << endl;
-    }
-
-    template<typename T>
     vector<T> input_vector(int n)
     {
         vector<T> v;
